@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AJHobbies</title>
+<title>AJ Hobbies</title>
+<style>
+body {
+  background-image: url('Images/Space.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: pink;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1 style="text-align:center">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">AJ's Page</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Apps.html">Apps</a></li>
+      <li><a href="Courses.html">Courses</a></li>
+      <li class="active"><a href="#">Hobbies</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1 style="text-align:center; color:white">
 	AJ's Hobbies
 </h1>
 
-<p>	<b> Welcome to my page.  These are my hobbies.</b> </p>
+<p style="color:white">	<b> Welcome to my page.  Here you will find my hobbies.</b> </p>
 
 <img src = "Images/batman.jfif" width= 33% height= 33%>
 <img src = "Images/cavs.png" width= 33% height= 200>
@@ -28,7 +77,6 @@
 </p>
 
 <p>AJ's Chess.com Profile: <a href="#" onclick=window.open('https://www.chess.com/member/rawnessman')> Chess Profile</a> </p>
-<p>Back to Home Page: <a href="Home.html"> Home Page</a> </p>
 
 </body>
 </html>
