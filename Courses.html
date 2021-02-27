@@ -10,28 +10,13 @@ body {
   background-size: cover;
 }
 
-a:link {
-  color: black;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
 a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
   color: pink;
   background-color: transparent;
   text-decoration: underline;
 }
 p{
-	color:white;
+	color:#D6A4A4;
 	text-align:center;
 }
 @media screen and (min-width: 601px) {
@@ -45,6 +30,30 @@ p{
     font-size: 18px;
   }
 }
+
+.boxed {
+  width: 90%;
+  padding: 1%;
+  border: 10px solid black;
+  margin: auto;
+  background-color: lightgray;
+}
+
+.bord {
+ <!-- necessary for some odd reason-->
+  width: 400px;
+    padding: 5px;
+    border-top: 10px solid #DAE2F8;
+    border-bottom:10px solid #D6A4A4;
+    background-image: 
+        linear-gradient(#DAE2F8, #D6A4A4),
+        linear-gradient(#DAE2F8, #D6A4A4)
+    ;
+    background-size:10px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+}
+
 </style>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,17 +83,29 @@ p{
 	Courses
 </h1>
 
-<p> CS: <p style="color:black"> Programming Fundamentals 1 (Java), Programming Fundamentals 2 (C++), Computer Organization (Assembly), Intro to Software Engineering (html), Fundamentals of Machine Learning (Python)</p></p>
+<div class="boxed">
 
-<p> EE: <p style="color:black"> Microprocessor Applications (Assembly & C), Circuits I, Digital Logic (vhdl), Computer Communications, Intro to Signals and Systems (Matlab)</p></p>
+<div class="bord">
+<p > Computer Science: <p style="color:black">  Programming Fundamentals 1, Programming Fundamentals 2, Computer Organization, Intro to Software Engineering, Fundamentals of Machine Learning, Operating Systems, CISE Design 1</p></p>
+</div>
 
-<p> Math: <p style="color:black"> Calculus I, II, III, Differential Equations, Linear Algebra, Discrete Structures, Data Structures, Engineering Statistics</p></p>
+<div class="bord">
+<p> Electrical Engineering: <p style="color:black"> Microprocessor Applications, Circuits I, Digital Logic, Computer Communications, Intro to Signals and Systems, Digital Design, Wireless and Mobile Networks</p></p>
+</div>
 
-<p> Programming Languages: <p style="color:black">C#, C++, C, Python, Java, Matlab, HTML, VHDL, Assembly</p></p>
+<div class="bord">
+<p> Math: <p style="color:black"> Calculus I, II, & III, Differential Equations, Linear Algebra, Discrete Structures, Data Structures, Engineering Statistics</p></p>
+</div>
 
-<p> Computer/Language Skills: <p style="color:black">PowerPoint, Excel, Word, Spanish</p></p>
+<div class="bord">
+<p> Programming Languages: <p style="color:black">C#, C++, C, Python, Java, Matlab, VHDL, Assembly</p></p>
+</div>
 
-<p>Link to my Resume: <a href="Docs/Resume.docx"> AJ's Resume</a> </p>
+<div class="bord">
+<p> Technical Skills: <p style="color:black">Visual Studio, Github, SQL, HTML/CSS, Quartus, Winforms, Tkinter, Jupyter Notebook, PowerPoint, Excel, Word, Spanish</p></p>
+</div>
+
+</div>
 
 </body>
 </html>
