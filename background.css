@@ -5,7 +5,7 @@ body {
   background-size: cover;
 }
 
-a.para
+a.para /* for each link in the text */
 {
     position: relative;
 	text-decoration: none;
