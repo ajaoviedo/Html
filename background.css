@@ -5,26 +5,54 @@ body {
   background-size: cover;
 }
 
-a:link {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
+a.para
+{
+    position: relative;
+	text-decoration: none;
+	color: pink;
 }
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
+a.para:hover
+{
+	color: pink;
 }
-a:hover {
-  color: green;
-  background-color: transparent;
-  text-decoration: underline;
+a.para:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
 }
-a:active {
-  color: pink;
-  background-color: transparent;
-  text-decoration: underline;
+a.para:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
+
+a.nav-link
+{
+    position: relative;
+}
+a.nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+a.nav-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 p{
 	color:white;
 	text-align:center;
