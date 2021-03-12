@@ -25,7 +25,7 @@
 	  	<a class="nav-link" href="Home.html">Home</a>
         <a class="nav-link" href="Projects.html">Projects</a>
 		<a class="nav-link" href="Courses.html">Courses</a>
-		<a class="nav-link active" aria-current="page" href="#">Hobbies</a>
+		<a class="nav-link active" aria-current="page" href="#">Interests</a>
       </div>
     </div>
   </div>
@@ -53,10 +53,57 @@
 <button onclick= window.open('https://www.arsenal.com/')>
 	Arsenal
 </button>
+<script>
+function LightDark()
+{
+	var elem = document.getElementById("LD");
+	var p = document.getElementsByTagName("p");
+	var ml1 = document.getElementsByClassName("ml1");
+	var para = document.getElementsByClassName("para");
+	if(elem.innerHTML.includes("Light"))
+	{
+		document.body.style.backgroundImage = "none";
+		elem.innerHTML = "Dark Mode";
+		for(i = 0; i < p.length; i++)
+		{
+			p[i].style.color = 'black';
+		}
+		for(i = 0; i < ml1.length; i++)
+		{
+			ml1[i].style.color = 'black';
+		}
+		for(i = 0; i < para.length; i++)
+		{
+			para[i].style.color = 'darkblue';
+		}
+	}
+	else
+	{
+		document.body.style.backgroundImage = "url(Images/sp.jpg)";
+		elem.innerHTML = "Light Mode";
+		for(i = 0; i < p.length; i++)
+		{
+			p[i].style.color = 'white';
+		}
+		for(i = 0; i < ml1.length; i++)
+		{
+			ml1[i].style.color = 'white';
+		}
+		for(i = 0; i < para.length; i++)
+		{
+			para[i].style.color = 'pink';
+		}
+	}
+}
+</script>
+<button id = "LD" onclick= LightDark()>
+	Light Mode
+</button>
 
-<p>
+<br>
+<br>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SCcrlp_U0SA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
 
 <p>AJ's Chess.com Profile: <a class = "para" href="#" onclick=window.open('https://www.chess.com/member/rawnessman')> Chess Profile</a> </p>
 
