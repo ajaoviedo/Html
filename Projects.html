@@ -11,20 +11,11 @@
   margin: auto;
   background-color: lightgray;
 }
-
-.bord {
- <!-- necessary for some odd reason-->
-  width: 400px;
-    padding: 5px;
-    border-top: 10px solid #DAE2F8;
-    border-bottom:10px solid #D6A4A4;
-    background-image: 
-        linear-gradient(#DAE2F8, #D6A4A4),
-        linear-gradient(#DAE2F8, #D6A4A4)
-    ;
-    background-size:10px 100%;
-    background-position:0 0, 100% 0;
-    background-repeat:no-repeat;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 7px;
+  text-align: center;
+  background-color: #f1f1f1;
 }
 </style>
 	<link rel="stylesheet" type="text/css" href="anime.css">  <!-- For animated lettering -->
@@ -54,6 +45,7 @@
   </div>
 </nav>
 
+<br>
 <h1 class="ml1">
   <span class="text-wrapper">
     <span class="line line1"></span>
@@ -71,27 +63,30 @@
 <!-- <p>Link to my SQL App: <a class = "para" href="Docs/WindowsFormsApp2.exe"> AJ's SQL App</a> </p> -->
 
 <div class="boxed">
+	<div class="card">
+	  <h3>Software Engineering Webpage</h3>
+	  <p style="color:black">(HTML/CSS and Bootstrap) Made a responsive navbar and 3D model viewing page for a client.</p>
+	</div>
 
-<div class="bord">
-<p > Software Engineering Webpage <p style="color:black"> (HTML/CSS and Bootstrap) Made a responsive navbar and 3D model viewing page for a client.</p></p>
-</div>
-
-<div class="bord">
-<p> System Imaging Tool <p style="color:black"> (C# and Winforms) Produced a user-friendly GUI (non-blocking) by utilizing API calls and threads to capture and apply images.</p></p>
-</div>
-
-<div class="bord">
-<p> SQL Server Application <p style="color:black"> (C# and WinForms, Python and Tkinter, SQL) Designed a GUI application that allows users to remotely login to an SQL Server Express database with credentials and edit tables in the database.  Made similar apps with both C# and Python.</p></p>
-</div>
-
-<div class="bord">
-<p> Cryptology Application <p style="color:black"> (C# and WinForms) Created a GUI application that performs cryptographic operations between plaintext and ciphertext.</p></p>
-</div>
-
-<div class="bord">
-<p> Huffman Encoding <p style="color:black"> (C++) Implemented Huffman’s Algorithm along with a frequency table to encode and decode words.  Also tested various sorting algorithms to evaluate their performances and O(n).</p></p>
-</div>
-
+	<div class="card">
+	  <h3>System Imaging Tool</h3>
+	  <p style="color:black">(C# and Winforms) Produced a user-friendly GUI (non-blocking) by utilizing API calls and threads to capture and apply images.</p>
+	</div>
+	
+	<div class="card">
+	  <h3>Mobile Takeout App</h3>
+	  <p style="color:black">(React Native and Firebase) Made a mobile app with a team that allows users to order food from local restaurants and receive rewards.</p>
+	</div>
+	
+	<div class="card">
+	  <h3>SQL Server Application</h3>
+	  <p style="color:black">(C# and WinForms, Python and Tkinter, SQL) Designed a GUI application that allows users to remotely login to an SQL Server Express database with credentials and edit tables in the database.  Made similar apps with both C# and Python.</p>
+	</div>
+	
+	<div class="card">
+	  <h3>Virtual Smart System</h3>
+	  <p style="color:black">(Python and Tkinter) Developed a GUI application that uses sockets to interact with middleware to retrieve sensor data from a Raspberry Pi and perform appropriate tasks.</p>
+	</div>
 </div>
 
 </body>

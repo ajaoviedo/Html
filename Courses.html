@@ -11,21 +11,28 @@
   margin: auto;
   background-color: lightgray;
 }
-
-.bord {
- <!-- necessary for some odd reason-->
-  width: 400px;
-    padding: 5px;
-    border-top: 10px solid #DAE2F8;
-    border-bottom:10px solid #D6A4A4;
-    background-image: 
-        linear-gradient(#DAE2F8, #D6A4A4),
-        linear-gradient(#DAE2F8, #D6A4A4)
-    ;
-    background-size:10px 100%;
-    background-position:0 0, 100% 0;
-    background-repeat:no-repeat;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 7px;
+  text-align: center;
+  background-color: #f1f1f1;
 }
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom: 5px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+.csharp {width: 80%; background-color: #04AA6D;} /* Green */
+.cpp {width: 75%; background-color: #2196F3;} /* Blue */
+.python {width: 70%; background-color: #f44336;} /* Red */
+.java {width: 60%; background-color: #808080;} /* Dark Grey */
+.c {width: 50%; background-color: black;} /* Black */
+.ps {width: 40%; background-color: orange;} /* Orange */
 </style>
 
 	<link rel="stylesheet" type="text/css" href="anime.css">  <!-- For animated lettering -->
@@ -55,6 +62,7 @@
   </div>
 </nav>
 
+<br>
 <h1 class="ml1">
   <span class="text-wrapper">
     <span class="line line1"></span>
@@ -66,27 +74,49 @@
 <script src = "anime.js"></script> <!--For letter animation-->
 
 <div class="boxed">
-
-<div class="bord">
-<p > Computer Science <p style="color:black">  Programming Fundamentals 1, Programming Fundamentals 2, Computer Organization, Intro to Software Engineering, Fundamentals of Machine Learning, Operating Systems, CISE Design 1</p></p>
-</div>
-
-<div class="bord">
-<p> Electrical Engineering <p style="color:black"> Microprocessor Applications, Circuits I, Digital Logic, Computer Communications, Intro to Signals and Systems, Digital Design, Wireless and Mobile Networks</p></p>
-</div>
-
-<div class="bord">
-<p> Math <p style="color:black"> Calculus I, II, & III, Differential Equations, Linear Algebra, Discrete Structures, Data Structures, Engineering Statistics</p></p>
-</div>
-
-<div class="bord">
-<p> Programming Languages <p style="color:black">C#, C++, C, Python, Java, Matlab, VHDL, Assembly</p></p>
-</div>
-
-<div class="bord">
-<p> Technical Skills <p style="color:black">Visual Studio, Github, SQL, HTML/CSS, Quartus, Winforms, Tkinter, Jupyter Notebook, PowerPoint, Excel, Word, Spanish</p></p>
-</div>
-
+	<div class="card">
+	  <h3>Computer Science</h3>
+	  <p style="color:black">Programming Fundamentals 1 & 2, Database Systems 1, Computer Organization, Intro to Software Engineering, Fundamentals of Machine Learning, Operating Systems, CISE Design 1 & 2</p>
+	</div>
+	<div class="card">
+	  <h3>Electrical Engineering</h3>
+	  <p style="color:black">Microprocessor Applications, Circuits I, Digital Logic, Computer Communications, Intro to Signals and Systems, Digital Design, Wireless and Mobile Networks, Internet of Things</p>
+	</div>
+	<div class="card">
+	  <h3>Math</h3>
+	  <p style="color:black">Calculus I, II, & III, Differential Equations, Linear Algebra, Discrete Structures, Data Structures, Engineering Statistics</p>
+	</div>
+	<div class="card">
+	  <h3 style="color:black; margin-bottom:5px">Programming Languages</h3>
+	  <p style="color:black; margin-top:10px; margin-bottom:0px">C#</p>
+	  <div class="container">
+		<div class="skills csharp">80%</div>
+	  </div>
+	  <p style="color:black; margin-top:10px; margin-bottom:0px">C++</p>
+	  <div class="container">
+		<div class="skills cpp">75%</div>
+	  </div>
+	  <p style="color:black; margin-top:10px; margin-bottom:0px">Python</p>
+	  <div class="container">
+		<div class="skills python">70%</div>
+	  </div>
+	  <p style="color:black; margin-top:10px; margin-bottom:0px">Java</p>
+	  <div class="container">
+		<div class="skills java">60%</div>
+	  </div>
+	  <p style="color:black; margin-top:10px; margin-bottom:0px">C, Matlab, Javascript, VHDL</p>
+	  <div class="container">
+		<div class="skills c">50%</div>
+	  </div>
+	  <p style="color:black; margin-top:10px; margin-bottom:0px">Assembly, PowerShell</p>
+	  <div class="container">
+		<div class="skills ps">40%</div>
+	  </div>
+	</div>
+	<div class="card">
+	  <h3>Technical Skills</h3>
+	  <p style="color:black">Visual Studio, Github, React Native, Firebase, SQL, HTML/CSS, Quartus, Winforms, Tkinter, Jupyter Notebook, PowerPoint, Excel, Word, Spanish</p>
+	</div>
 </div>
 
 </body>

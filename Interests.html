@@ -2,8 +2,65 @@
 <html>
 <head>
 <title>AJ Interests</title>
+<link rel="stylesheet" type="text/css" href="background.css">
+<style>
+.boxed {
+  width: 85%;
+  padding: 1%;
+  border: 10px solid black;
+  margin: auto;
+  background-color: lightgray;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
-	<link rel="stylesheet" type="text/css" href="background.css">
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  padding-top:10px
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
 	<link rel="stylesheet" type="text/css" href="anime.css">  <!-- For animated lettering -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,6 +88,7 @@
   </div>
 </nav>
 
+<br>
 <h1 class="ml1">
   <span class="text-wrapper">
     <span class="line line1"></span>
@@ -41,72 +99,62 @@
 
 <script src = "anime.js"></script> <!--For letter animation-->
 
-<img src = "Images/batman.jfif" width= 33% height= 33%>
-<img src = "Images/cavs.png" width= 33% height= 200>
-<img src = "Images/arsenal.png" width= 33% height= 200>
-<button onclick= window.open('https://www.dccomics.com/characters/batman')>
-	Batman
-</button>
-<button onclick= window.open('https://www.nba.com/cavaliers/')>
-	Cavaliers
-</button>
-<button onclick= window.open('https://www.arsenal.com/')>
-	Arsenal
-</button>
-<script>
-function LightDark()
-{
-	var elem = document.getElementById("LD");
-	var p = document.getElementsByTagName("p");
-	var textwrap = document.getElementsByClassName("text-wrapper");
-	var para = document.getElementsByClassName("para");
-	if(elem.innerHTML.includes("Light"))
-	{
-		document.body.style.backgroundImage = "none";
-		elem.innerHTML = "Dark Mode";
-		for(i = 0; i < p.length; i++)
-		{
-			p[i].style.color = 'black';
-		}
-		for(i = 0; i < textwrap.length; i++)
-		{
-			textwrap[i].style.color = 'black';
-		}
-		for(i = 0; i < para.length; i++)
-		{
-			para[i].style.color = 'darkblue';
-		}
-	}
-	else
-	{
-		document.body.style.backgroundImage = "url(Images/sp.jpg)";
-		elem.innerHTML = "Light Mode";
-		for(i = 0; i < p.length; i++)
-		{
-			p[i].style.color = 'white';
-		}
-		for(i = 0; i < textwrap.length; i++)
-		{
-			textwrap[i].style.color = 'white';
-		}
-		for(i = 0; i < para.length; i++)
-		{
-			para[i].style.color = 'pink';
-		}
-	}
-}
-</script>
-<button id = "LD" onclick= LightDark()>
-	Light Mode
-</button>
+<div class="boxed">
+	<div class="container">
+		<div class="flip-card">
+		  <div class="flip-card-inner">
+			<div class="flip-card-front">
+			  <img src="Images/batman.png" alt="Avatar" style="width:270px;height:175px;">
+			</div>
+			<div class="flip-card-back">
+			<br>
+			  <h1><a class = "para" href="#" onclick = window.open("https://www.dccomics.com/characters/batman")>Batman</a></h1>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="flip-card">
+		  <div class="flip-card-inner">
+			<div class="flip-card-front">
+			  <img src="Images/cavs.png" alt="Avatar" style="width:250px;height:180px;">
+			</div>
+			<div class="flip-card-back">
+			<br>
+			  <h1><a class = "para" href="#" onclick = window.open("https://www.nba.com/cavaliers/")>Cavs</a></h1>
+			</div>
+		  </div>
+		</div>
 
-<br>
-<br>
+		<div class="flip-card">
+		  <div class="flip-card-inner">
+			<div class="flip-card-front">
+			  <img src="Images/arsenal.png" alt="Avatar" style="width:200px;height:180px;">
+			</div>
+			<div class="flip-card-back">
+			<br>
+			  <h1><a class = "para" href="#" onclick = window.open("https://www.arsenal.com/")>Arsenal</a></h1>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="flip-card">
+		  <div class="flip-card-inner">
+			<div class="flip-card-front">
+			  <img src="Images/chess.png" alt="Avatar" style="width:200px;height:180px;">
+			</div>
+			<div class="flip-card-back">
+			<br>
+			  <h1><a class = "para" href="#" onclick = window.open("https://www.chess.com/member/rawnessman")>Chess</a></h1>
+			</div>
+		  </div>
+		</div>
+		
+	</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SCcrlp_U0SA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<br>
 
-<p>اسكندر</p>
-<p>AJ's Chess.com Profile: <a class = "para" href="#" onclick=window.open('https://www.chess.com/member/rawnessman')> Chess Profile</a> </p>
+	<p style="color:black">اسكندر</p>
+</div>
 
 <footer align = "center">
   <a href='https://freehitcounters.org/'>Hit Counter HTML Code</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=1157ded01dd7385cd57bcf37060ac0d995de897b'></script>
