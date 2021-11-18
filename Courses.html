@@ -17,22 +17,75 @@
   text-align: center;
   background-color: #f1f1f1;
 }
-.container {
-  width: 100%; /* Full width */
-  background-color: #ddd; /* Grey background */
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 4px;
 }
-.skills {
-  text-align: right; /* Right-align text */
-  padding-top: 5px; /* Add top padding */
-  padding-bottom: 5px; /* Add bottom padding */
-  color: white; /* White text color */
+.bar{
+    position: relative;
+    border: 2px solid #0d96e0;
+	margin-bottom: 14px;
+    border-radius: 20px;
+  
 }
-.csharp {width: 80%; background-color: #04AA6D;} /* Green */
-.cpp {width: 75%; background-color: #2196F3;} /* Blue */
-.python {width: 70%; background-color: #f44336;} /* Red */
-.java {width: 60%; background-color: #808080;} /* Dark Grey */
-.c {width: 50%; background-color: black;} /* Black */
-.ps {width: 40%; background-color: orange;} /* Orange */
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #0d96e0;
+}
+
+#csharp-bar{
+	background-color:green;
+    animation: css-fill 2s forwards;
+}
+
+@keyframes css-fill{
+    100%{
+        width: 80%;
+    }
+}
+
+#python-bar{
+	background-color:green;
+    animation: python-fill 2s forwards;
+}
+@keyframes python-fill {
+    100%{
+        width: 70%;
+    }
+}
+
+#java-bar{
+    animation: java-fill 2s forwards;
+}
+@keyframes java-fill{
+    100%{
+        width: 60%;
+    }
+} 
+
+#cmjv-bar{
+    animation: cmjv-fill 2s forwards;
+}
+@keyframes cmjv-fill{
+    100%{
+        width: 50%;
+    }
+} 
+
+#ap-bar{
+	background-color:orange;
+    animation: ap-fill 2s forwards;
+}
+@keyframes ap-fill{
+    100%{
+        width: 40%;
+    }
+} 
 </style>
 
 	<link rel="stylesheet" type="text/css" href="anime.css">  <!-- For animated lettering -->
@@ -88,30 +141,56 @@
 	</div>
 	<div class="card">
 	  <h3 style="color:black; margin-bottom:5px">Programming Languages</h3>
-	  <p style="color:black; margin-top:10px; margin-bottom:0px">C#</p>
-	  <div class="container">
-		<div class="skills csharp">80%</div>
-	  </div>
-	  <p style="color:black; margin-top:10px; margin-bottom:0px">C++</p>
-	  <div class="container">
-		<div class="skills cpp">75%</div>
-	  </div>
-	  <p style="color:black; margin-top:10px; margin-bottom:0px">Python</p>
-	  <div class="container">
-		<div class="skills python">70%</div>
-	  </div>
-	  <p style="color:black; margin-top:10px; margin-bottom:0px">Java</p>
-	  <div class="container">
-		<div class="skills java">60%</div>
-	  </div>
-	  <p style="color:black; margin-top:10px; margin-bottom:0px">C, Matlab, Javascript, VHDL</p>
-	  <div class="container">
-		<div class="skills c">50%</div>
-	  </div>
-	  <p style="color:black; margin-top:10px; margin-bottom:0px">Assembly, PowerShell</p>
-	  <div class="container">
-		<div class="skills ps">40%</div>
-	  </div>
+	  
+	  <div class="skills">
+		 <div class="details">
+		   <span style="color:black">C#</span>
+		   <span style="color:black">80%</span>
+		  </div>
+		  <div class="bar">
+			<div id="csharp-bar"></div>
+		  </div>
+		</div>
+		
+		<div class="skills">
+		 <div class="details">
+		   <span style="color:black">Python, C++</span>
+		   <span style="color:black">70%</span>
+		  </div>
+		  <div class="bar">
+			<div id="python-bar"></div>
+		  </div>
+		</div>
+		
+		<div class="skills">
+		 <div class="details">
+		   <span style="color:black">Java</span>
+		   <span style="color:black">60%</span>
+		  </div>
+		  <div class="bar">
+			<div id="java-bar"></div>
+		  </div>
+		</div>
+		
+		<div class="skills">
+		 <div class="details">
+		   <span style="color:black">C, Matlab, Javascript, VHDL</span>
+		   <span style="color:black">50%</span>
+		  </div>
+		  <div class="bar">
+			<div id="cmjv-bar"></div>
+		  </div>
+		</div>
+		
+		<div class="skills">
+		 <div class="details">
+		   <span style="color:black">Assembly, PowerShell</span>
+		   <span style="color:black">40%</span>
+		  </div>
+		  <div class="bar">
+			<div id="ap-bar"></div>
+		  </div>
+		</div>
 	</div>
 	<div class="card">
 	  <h3>Technical Skills</h3>
